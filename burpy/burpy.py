@@ -3,9 +3,9 @@ import urllib.parse as urllib
 import base64
 import csv
 
-log_path = 'burp_demo.log'
+log_path = 'burp.log'
 output_csv_log = 'httplog.csv'
-class_flag = '1'
+class_flag = ''
 
 class LogParse:
     def __init__(self):

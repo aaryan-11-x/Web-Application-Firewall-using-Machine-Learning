@@ -5,7 +5,7 @@ import csv
 
 log_path = 'burp.log'
 output_csv_log = 'httplog.csv'
-class_flag = '1'
+class_flag = ''
 
 class LogParse:
 	def __init__(self):
@@ -77,7 +77,7 @@ def ExtractFeatures(method, path_enc, body_enc, headers):
 		badwords_count += path.count(word) + body.count(word)
 	for header in headers:
 		badwords_count += headers[header].count(word) + headers[header].count(word)
-	return [method, path_enc.encode('utf8').strip(), body_enc.encode('utf8').strip(), single_q, double_q, dashes, braces, spaces, badwords_count]
+	return [method, path_enc.encode('utf8').strip(), body_enc.encode('utf8').strip(), single_q, double_q, dashes, braces, spaces, badwords_count, class_flag]
 
 f = open(output_csv_log, "w")
 c = csv.writer(f)
