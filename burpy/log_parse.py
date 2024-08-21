@@ -74,8 +74,9 @@ def ExtractFeatures(method, path_enc, body_enc, headers):
 	braces = path.count(')') + body.count(')')
 	spaces = path.count(' ') + body.count(' ')
 	for word in badwords:
-		for header in headers:
-			badwords_count += headers[header].count(word) + body.count(word)
+		badwords_count += path.count(word) + body.count(word)
+	for header in headers:
+		badwords_count += headers[header].count(word) + headers[header].count(word)
 	return [method, path_enc.encode('utf8').strip(), body_enc.encode('utf8').strip(), single_q, double_q, dashes, braces, spaces, badwords_count]
 
 f = open(output_csv_log, "w")
