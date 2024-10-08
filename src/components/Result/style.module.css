@@ -1,0 +1,26 @@
+.container {
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  transition: color 0.2s ease-in-out;
+  min-height: 40px;
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: bold;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 1px;
+  line-height: 1.5;
+  margin: 0;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
