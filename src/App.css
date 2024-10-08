@@ -1,0 +1,20 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+/* Center the main_body content */
+.main_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+  background-color: #ffffff;
+  margin: 20px;
+  padding: 20px;
+  border-radius: 8px;
+}
